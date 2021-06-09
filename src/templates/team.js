@@ -11,8 +11,8 @@ const Team = ({ data }) => {
         alignItems: "center",
       }}
     >
-      <h1>{data.team.teamInfo.name}</h1>
-      <p>{data.team.teamInfo.sport}</p>
+      <h1>{data.team.teaminfo.name}</h1>
+      <p>{data.team.teaminfo.sports}</p>
       <div>
         {data.team.coaches.map(coach => (
           <p>{coach}</p>
@@ -32,9 +32,9 @@ export const pageQuery = graphql`
       coed
       coaches
       numberOfPlayers
-      teamInfo {
+      teaminfo {
         name
-        sport
+        sports
         league
       }
     }
